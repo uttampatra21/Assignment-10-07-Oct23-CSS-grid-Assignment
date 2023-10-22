@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #task3,
+    #task4,
+    #task5 {
+      height: 100vh;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 100px 100px;
+      grid-auto-rows: 50px;
+      gap: 1rem;
+    }
+    #box {
+      background-color: black;
+      height: 40px;
+      width: 140px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #colom {
+      display: grid;
+      grid-auto-columns: 50px;
+      gap: 1rem;
+    }
+    #box-cont {
+      margin: 2rem;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      justify-items: center; /* Default horizontal alignment for all items */
+      gap: 10px;
+    }
+
+    .grid-item {
+      background-color: lightblue;
+      border: 1px solid darkblue;
+    }
+
+    .grid-container1 {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      gap: 10px;
+    }
+
+    .grid-item1 {
+      background-color: lightblue;
+      border: 1px solid darkblue;
+      justify-self: end; /* Overrides the default alignment for this item */
+    }
+  </style>
+  <body>
+    <div id="task3">
+      <h3>
+        <strong
+          >Explain the use of grid-auto-row and grid-auto-column using code
+          examples.</strong
+        >
+      </h3>
+      <h3>
+        <strong>ANS : </strong>
+        <small>
+          Certainly! In CSS Grid Layout, grid-auto-rows and grid-auto-columns
+          are properties that allow you to define the size of rows and columns
+          that are implicitly created by the grid when the number of rows or
+          columns is not explicitly set in the grid definition.</small
+        >
+      </h3>
+
+      <h4><strong>Exmp : </strong></h4>
+      <div
+        class=""
+        style="display: grid; grid-template-columns: repeat(2, 1fr)"
+      >
+        <div class="row">
+          <div id="box"></div>
+          <div id="box"></div>
+          <div id="box"></div>
+          <div id="box"></div>
+        </div>
+
+        <div id="colom">
+          <div id="box"></div>
+          <div id="box"></div>
+          <div id="box"></div>
+          <div id="box"></div>
+        </div>
+      </div>
+    </div>
+    <div id="task4">
+      <h4>Task 4</h4>
+      <div id="box-cont">
+        <div class="box1" id="box">1</div>
+        <div class="box2" id="box">2</div>
+        <div class="box3" id="box">3</div>
+        <div class="box4" id="box">4</div>
+        <div class="box5" id="box">5</div>
+        <div class="box6" id="box">6</div>
+        <div class="box7" id="box">7</div>
+        <div class="box8" id="box">8</div>
+      </div>
+    </div>
+    <div id="task5">
+      <h3>Task 5:</h3>
+      <h5>
+        Problem Statement <br />Explain the difference between justify-items and
+        justify-self using code examples.
+      </h5>
+      <strong>Ans ::</strong>
+      <small
+        >In CSS Grid Layout, justify-items and justify-self are properties that
+        control the horizontal alignment of grid items within their grid
+        container. However, they are used at different levels of the layout
+        hierarchy.
+      </small>
+
+      <br />
+      <br />
+      <br />
+
+      <div id="examp" style="display: flex; justify-content: space-evenly">
+        <div class="grid-container">
+          <div class="grid-item">1</div>
+          <div class="grid-item">2</div>
+          <div class="grid-item">3</div>
+        </div>
+
+        <div class="grid-container1">
+          <div class="grid-item1">1</div>
+          <div class="grid-item1">2</div>
+          <div class="grid-item1">3</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
